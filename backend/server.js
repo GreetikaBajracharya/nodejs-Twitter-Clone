@@ -5,6 +5,8 @@ import {v2 as cloudinary} from "cloudinary";
 
 import authRoutes from "./routes/auth.routes.js";
 import userRoutes from "./routes/user.routes.js";
+import postRoutes from "./routes/post.routes.js";
+
 import connectMongoDB from "./db/connectMongoDB.js";
 
 dotenv.config();
@@ -26,6 +28,7 @@ console.log(process.env.MONGO_URI);
 
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
+app.use("/api/posts",postRoutes);
 
 app.listen(PORT,() => {
     console.log("Server running on: "+PORT);
