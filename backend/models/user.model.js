@@ -57,5 +57,5 @@ import mongoose from "mongoose";
 );
 
 const User = mongoose.model("User",userSchema);
-                            //users-> in db even tho "User" in above
+                           
 export default User;

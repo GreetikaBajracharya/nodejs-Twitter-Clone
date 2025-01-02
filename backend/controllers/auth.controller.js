@@ -35,13 +35,13 @@ export const signup = async (req,res) =>{
             generateTokenAndSetCookie(newUser._id,res);
             await newUser.save();
 
-            res.status(200).json({
+            res.status(201).json({
                 _id: newUser._id,
                 fullName: newUser.fullName,
                 username: newUser.username,
                 email: newUser.email,
                 fullName: newUser.fullName,
-                folloewrs: newUser.followers,
+                followers: newUser.followers,
                 following: newUser.following,
                 profileImg: newUser.profileImg,
                 coverImg: newUser.coverImg,
